@@ -1,0 +1,98 @@
+<div class="jumbotron jumbotron-fluid accessform-css">
+  <div class="container">
+    <div class="container">
+
+      <nav>
+        <div class="nav nav-tabs tab-css" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active sign-tab" id="nav-home-tab" data-toggle="tab" href="#nav-login" role="tab"
+            aria-controls="nav-home" aria-selected="true">Sign In</a>
+          <a class="nav-item nav-link sign-tab" id="nav-profile-tab" data-toggle="tab" href="#nav-signup" role="tab"
+            aria-controls="nav-profile" aria-selected="false">Sign up</a>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+
+        <!-- LoginForm -->
+
+        <div class="tab-pane fade show active" id="nav-login" role="tabpanel" aria-labelledby="nav-login-tab">
+
+          <div class="container accessform-container-css">
+
+            <div class="text-center"></div>
+
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+
+              <label>
+                <input type="text" formControlName="email" placeholder="Enter Email" required>
+                <small id="email" class="form-text text-white">
+                  Your UserName must contain letters and numbers.
+                </small>
+              </label>
+
+              <!-- <div>
+              <span class="badge badge-warning">Email Required</span>
+            </div> -->
+
+              <!-- <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+
+                <div *ngIf="email.errors.required">
+
+                  <span class="badge badge-warning">Email Required</span>
+
+                </div>
+                <div *ngIf="email.errors.minlength">
+
+                  <span class="badge badge-warning">Invalid Email</span>
+
+                </div>
+
+              </div> -->
+
+
+
+
+
+              <label>
+                <input type="password" formControlName="password" placeholder="Enter Password" required>
+                <small id="usernameinfo" class="form-text text-white">
+                  Your UserName must contain letters and numbers.
+                </small>
+              </label>
+
+              <!-- <div class="pt-1" *ngIf="isButtonEnabled">
+                <input type="checkbox" class="rememberid" name="webdesigner" id="webdesigner" />
+                <label class="rememberid-text" for="webdesigner">Remember My ID</label>
+              </div> -->
+
+              <div class="pt-1" *ngIf="isButtonEnabled">
+                <mat-checkbox class="rememberid">Remember my ID</mat-checkbox>
+              </div>
+
+
+
+
+              <div class="pt-4 text-center" *ngIf="isButtonEnabled ">
+                <button type="submit" [disabled]="profileForm.invalid"
+                  class="btn btn-light btn-lg btn-block button-signin">Sign in</button>
+              </div>
+
+              <div class="pt-4 text-center" *ngIf="isSpinnerEnabled">
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+              </div>
+
+            </form>
+
+          </div>
+
+        </div>
+
+
+        <div class="tab-pane fade" id="nav-signup" role="tabpanel" aria-labelledby="nav-signu-tab">...</div>
+      </div>
+
+
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,33 @@
+.login-page
+{
+    background-image: url(src/assets/login.jpg);
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height:max-content;
+    width:auto;
+    // padding-bottom:100vh;
+}
+
+.soochuck-logo{
+    font-size: xx-large !important;
+    font-weight: bold;
+}
+
+.accessform-container-css{
+    padding-top: 4rem;
+}
+
+.accessform-css{
+    background-color: rgb(46, 79, 169,0.8) !important;
+    border-style: dashed;
+    border-color: white;
+    border-radius: 7.25rem !important;
+    box-shadow: 1px 1px 9px 9px;
+}
+
+.email-validation{
+    
+}
